@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown App</title>
+  <style>
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid black;
+      position: relative;
+      margin: 20px;
+      overflow: hidden;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: red;
+      position: absolute;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+      transform-origin: center center;
+      animation: none;
+    }
+
+    @keyframes move {
+      0% {
+        transform: rotate(0deg) translateX(90px);
+      }
+      100% {
+        transform: rotate(360deg) translateX(90px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Countdown App</h1>
+  <label for="seconds">Enter the number of seconds:</label>
+  <input type="number" id="seconds">
+  <br><br>
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+  <button id="resetBtn">Reset</button>
+  <br><br>
+  <div class="circle">
+    <div id="dot" class="dot"></div>
+  </div>
+  <br>
+  <div id="countdown"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
